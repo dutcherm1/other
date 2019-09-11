@@ -1,0 +1,14 @@
+source ~/scripts/modules
+source ~/scripts/astro
+
+i=0
+numlines="$(find DD* -maxdepth 0 -type d | wc -l)"
+while [ "$i" -le "$((numlines - 1))" ]
+do
+        printf -v f "DD%04d/DD%04d" $i $i
+        echo "Filename = $f"
+        yt plot $f
+        ((i++))
+done
+deactivate
+
