@@ -1,19 +1,19 @@
-ProblemType               =  90       // Galaxy Disk Patch test problem
+ProblemType               =  95    #Galaxy Disk Patch test problem
 Gamma                     =  1.6666667
 DensityUnits              = 1.67e-29  # m_H
 LengthUnits               = 1.543e+22 #5kpc
 TimeUnits                 = 3.156e+13   #1e6 yr
 
 TopGridRank               = 3
-TopGridDimensions         = 44 44 628     # can only be even number
+TopGridDimensions         = 44 44 628     #can only be even number
 DomainLeftEdge            = 0 0 -0.5
 DomainRightEdge            = 0.07 0.07 0.5
 LeftFaceBoundaryCondition  = 3 3 1
 RightFaceBoundaryCondition  = 3 3 1
 
 
-StaticHierarchy           = 0       // 0 is dynamic hierarchy, i.e. using AMR machinery
-MaximumRefinementLevel    = 2        // use 0 AMR levels
+StaticHierarchy           = 0       #0 is dynamic hierarchy, i.e. using AMR machinery
+MaximumRefinementLevel    = 2        #use 0 AMR levels
 
 StaticRefineRegionLevel[0] = 0
 StaticRefineRegionLeftEdge[0]     = 0 0 -0.2
@@ -30,14 +30,13 @@ StopTime                  = 300.0
 dtDataDump                = 0.2
 DataDumpName              = sb_
 
-HydroMethod               = 0       // PPM - 0; ZEUS - 2
+HydroMethod               = 0       #PPM - 0; ZEUS - 2
 RiemannSolver             =5
 ReconstructionMethod      =1
-CourantSafetyNumber       = 0.5     // ppm - 0.8; zeus - 0.5
+CourantSafetyNumber       = 0.5     #ppm - 0.8; zeus - 0.5
 DualEnergyFormalism       =1
 
 tiny_number               = 1.0e-15
-
 
 GalaxyDiskPatchRefineAtStart = 1
 GalaxyDiskPatchGasDistributionType = 20 # 30:slicc; 20: Miao
